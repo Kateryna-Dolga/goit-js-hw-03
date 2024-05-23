@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>JS-GO-IT-HW-1</title>
+    
+
+</head>
+
+    
+    <h1>GOIT JavaScript </h1>
+    <div class="menu-div">
+    <ul class="menu-ul">
+        <li class="menu-li">
+            <a class="menu-a">
+                Homework-1
+            </a>
+        </li>
+        <li class="menu-li">
+            <a class="menu-a">
+                Homework-2
+            </a>
+        </li>
+        <li class="menu-li">
+            <a class="menu-a">
+                Homework-3
+            </a>
+        </li>
+    <li class="menu-li">
+        <a class="menu-a orange">
+            Homework-4
+        </a>
+    </li>
+        <li class="menu-li">
+            <a class="menu-a">
+                Homework-5
+            </a>
+        </li>
+        <li class="menu-li">
+            <a class="menu-a">
+                Homework-6
+            </a>
+        </li>
+        <li class="menu-li">
+            <a class="menu-a">
+                Homework-7
+            </a>
+        </li>
+        <li class="menu-li">
+            <a class="menu-a">
+                Homework-8
+            </a>
+        </li>
+        <li class="menu-li">
+            <a class="menu-a">
+                Homework-9
+            </a>
+        </li>
+        <li class="menu-li">
+            <a class="menu-a">
+                Homework-10
+            </a>
+        </li>
+        <li class="menu-li">
+            <a class="menu-a">
+                Homework-11
+            </a>
+        </li>
+        <li class="menu-li">
+            <a class="menu-a">
+                Homework-12
+            </a>
+        </li>
+    </ul>
+    </div>
+<div class="content">
+   
+    
+<div class="main">    
+<div class="foto"><img class="cat-it" width="260" src="./img/js.jpg" alt="it-cat"></div>
+    
+<div class="result-div">    
+    <!---------------------------------------------------------------------------------------->   
+<h2 class="task-htwo">Задача 1. Генератор slug</h2>
+<pre>Напиши функцію slugify(title), яка приймає заголовок статті, 
+параметр title і повертає slug, створений із цього рядка.
+
+Значенням параметра title будуть рядки, слова яких розділені лише пробілами.
+Усі символи slug повинні бути в нижньому регістрі.
+Усі слова slug повинні бути розділені тире.
+Візьми код нижче і встав після оголошення своєї функції для перевірки 
+коректності її роботи. У консоль будуть виведені
+результати її роботи.
+
+Залиш цей код для перевірки ментором.
+
+console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
+console.log(slugify("English for developer")); // "english-for-developer"
+console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
+console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); //
+"how-to-become-a-junior-developer-in-two-weeks"
+</pre>
+
+<h4>Розв'язок:</h4>
+<pre>function slugify(title) {
+const slug = title.toLowerCase().split(" ").join("-");
+return slug;
+}
+
+
+console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
+console.log(slugify("English for developer")); // "english-for-developer"
+console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
+console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); //
+"how-to-become-a-junior-developer-in-two-weeks"</pre>
+
+<h4>Результат:</h4>
+
+<img class="img-foto" width="800" src="./img/task-1.jpg" alt="it-cat">
+<!------------------------------------------------------------------------------------------------>
+
+<h2 class="task-htwo">Задача 2. Композиція масивів</h2>
+<pre>Напиши функцію під назвою makeArray, яка приймає три параметри: firstArray (масив), secondArray (масив) і maxLength
+(число). Функція повинна створювати новий масив, який містить усі елементи з firstArray, а потім усі елементи з
+secondArray.
+
+Якщо кількість елементів у новому масиві перевищує maxLength, функція повинна повернути копію масиву з довжиною
+maxLength елементів.
+В іншому випадку функція повинна повернути весь новий масив.
+
+
+Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені
+результати її роботи.
+
+
+
+console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
+console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
+console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3)); // ["Mango", "Ajax", "Chelsea"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Earth", "Jupiter"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []
+
+Залиш цей код для перевірки ментором.
+
+</pre>
+
+<h4>Розв'язок:</h4>
+<pre>function makeArray(firstArray, secondArray, maxLength) {
+const newArray = firstArray.concat(secondArray);
+
+if (newArray.length > maxLength) {
+return newArray.slice(0, maxLength);
+} else {
+return newArray;
+}
+}
+
+
+console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
+console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
+console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3)); // ["Mango", "Ajax", "Chelsea"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Earth", "Jupiter"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
+console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []</pre>
+
+<h4>Результат:</h4>
+
+<img class="img-foto" width="800" src="./img/task-2.jpg" alt="it-cat">
+
+<!---------------------------------------------------------------------------------------->
+<h2 class="task-htwo">Задача 3. Фільтрація масиву чисел</h2>
+<pre>Напиши функцію filterArray(numbers, value), яка приймає 
+    масив чисел (numbers) та значення (value) як параметри. Функція
+повинна повертати новий масив лише тих чисел із масиву numbers, 
+які більші за значення value.
+
+
+
+Усередині функції:
+
+Створи порожній масив, у який будеш додавати підходящі числа.
+Використай цикл для ітерації кожного елемента масиву numbers.
+Використовуй умовний оператор if усередині циклу для перевірки кожного
+елемента и додавання до свого масиву.
+Поверни свій новий масив з підходящими числами як результат.
+
+
+Візьми код нижче і встав після оголошення своєї функції для перевірки 
+коректності її роботи. У консоль будуть виведені
+результати її роботи.
+
+
+
+console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
+console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
+console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
+console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
+console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+
+Залиш цей код для перевірки ментором.
+</pre>
+
+<h4>Розв'язок:</h4>
+<pre>function filterArray(numbers, value){
+let myArray = [];
+for (let i = 0; i < numbers.length; i++){ 
+    if (numbers[i]> value) {
+    myArray.push(numbers[i]);
+    }
+    }
+    return myArray
+    }
+
+    console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
+    console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
+    console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
+    console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
+    console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+</pre>
+
+<h4>Результат:</h4>
+
+<img class="img-foto" width="800" src="./img/task-3.jpg" alt="it-cat">
+<!------------------------------------------------------------------------------------------------>
+</div>
+</div>
+<!--------------------------------------------------hhhhhhh-->
+
+<!--<img class="result top" src="./img/js-result.jpg" alt="js-result" width="1100">
+<img class="result bottom" src="./img/js-result-one.jpg" alt="js-result" width="1100">-->
+
+
+</div>
+
+<footer class="footer">
+  
+    <ul class="footer-menu-ul">
+        <li class="footer-menu-li">
+            <a class="footer-menu-a">
+                Homework-1
+            </a>
+        </li>
+        <li class="footer-menu-li">
+            <a class="footer-menu-a">
+                Homework-2
+            </a>
+        </li>
+        <li class="footer-menu-li">
+            <a class="footer-menu-a">
+                Homework-3
+            </a>
+        </li>
+        <li class="footer-menu-li">
+            <a class="footer-menu-a">
+                Homework-4
+            </a>
+        </li>
+        <li class="footer-menu-li">
+            <a class="footer-menu-a">
+                Homework-5
+            </a>
+        </li>
+        <li class="footer-menu-li">
+            <a class="footer-menu-a">
+                Homework-6
+            </a>
+        </li>
+        <li class="footer-menu-li">
+            <a class="footer-menu-a">
+                Homework-7
+            </a>
+        </li>
+        <li class="footer-menu-li">
+            <a class="footer-menu-a">
+                Homework-8
+            </a>
+        </li>
+        <li class="footer-menu-li">
+            <a class="footer-menu-a">
+                Homework-9
+            </a>
+        </li>
+        <li class="footer-menu-li">
+            <a class="footer-menu-a">
+                Homework-10
+            </a>
+        </li>
+        <li class="footer-menu-li">
+            <a class="footer-menu-a">
+                Homework-11
+            </a>
+        </li>
+        <li class="footer-menu-li">
+            <a class="footer-menu-a">
+                Homework-12
+            </a>
+        </li>
+    </ul>
+    <div class="footer-info">
+    <p>Kateryna Dolga</p>
+    <p>107</p>
+    <p>email: july_info@ukr.net</p>
+    <p>tel: 067-176-1313</p>
+</div>
+</footer>
+
+<script src="./js/task-1.js"></script>
+<script src="./js/task-2.js"></script>
+<script src="./js/task-3.js"></script>
+
+
+
+
+
+</body>
+</html>

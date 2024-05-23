@@ -1,0 +1,174 @@
+div{
+    borde: 1px solid black;
+}
+
+h1{
+    font-size: 54px;
+    color: rgb(255, 140, 0);
+    text-align: center;
+    text-shado: 1px 2px 3px rgb(255, 140, 0);
+    display: block;
+   
+}
+li{
+    font-size: 36px;
+}
+p{
+    margin: 0px;
+    padding: 0px;
+}
+.content{
+    margin: 0 auto;
+    max-width: 1280px;
+    margin-bottom: 100px;
+    
+
+}
+.img-foto{
+    margin-bottom: 100px;
+}
+pre{ 
+    font-size: 16px;
+    width: 800px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 50px;
+}
+img{
+    display: block;
+}
+
+.cat-it{
+    border-radius: 50%;
+
+}
+.foto{
+ border-rigt: 1px solid gray;
+    margin-right: 50px;
+}
+.main
+{
+display: flex;
+}
+
+.result{
+    margin: 0 auto;
+ 
+   text-align: center;
+
+}
+.top{
+margin-top: 50px;
+}
+.bottom{
+margin-bottom: 150px;
+}
+
+/*---------------------------------------------------hhhhhh-----*/
+
+.result-li{
+    list-style-type: none;
+    font-size: 18px;
+    color:rgb(158, 158, 158);
+    margin-bottom: 10px;
+}
+
+.task-htwo{
+    color: rgb(78, 78, 78);
+    font-size: 35px;
+}
+/*---------------------------------------------------hhhhhh-----*/
+.menu-div{
+    margin: 0 auto;
+        max-width: 1280px;
+      
+        display: flex;
+        
+       
+}
+.menu-ul{
+
+  
+    list-style-type: none;
+    display: flex;
+    gap: 4px;
+    width: 100%;
+}
+
+.menu-li{
+display: flex;
+width: 100%;
+}
+
+
+.menu-a{
+  
+    color: rgb(255, 140, 0);
+    font-size: 13px;
+    border: 1px solid rgb(255, 140, 0);
+    padding: 10px;
+    border-radius: 10px;
+ text-align: center;
+    width: 100%;
+   
+}
+
+.menu-a:hover{
+    color: rgb(255, 255, 255);
+    border:1px solid rgb(255, 140, 0);
+    background-color: rgb(255, 140, 0);
+}
+.orange {
+    background-color: rgb(255, 140, 0);
+    color: white;
+}
+
+.footer{
+   color:white;
+    background-color: black;
+    min-height: 200px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    
+ 
+}
+.footer p{
+    color:white;
+}
+
+/*---------------------------------------------------hhhhhh-----*/
+.footer-menu-li{
+    list-style-type: none;
+    margin: 30px 0px;
+}
+.footer-menu-ul{
+    display: flex;
+text-align: center;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+
+.footer-menu-a{
+    font-size: 14px;
+    padding: 10px;
+    gap: 10px;
+    border-right: 1px solid white;
+}
+
+.footer-menu-a:hover{
+    
+ color:rgb(255, 140, 0);
+}
+
+.footer-info{
+    text-align: center;
+    border-top: 1px solid white;
+    width: 600px;
+    padding: 20px;
+    text-align: center;
+        justify-content: center;
+        justify-items: center;
+    margin: 0 auto;
+}
