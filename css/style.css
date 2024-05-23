@@ -20,7 +20,7 @@ p{
 .content{
     margin: 0 auto;
     max-width: 1280px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     
 
 }
@@ -60,7 +60,7 @@ display: flex;
 margin-top: 50px;
 }
 .bottom{
-margin-bottom: 150px;
+margin-bottom: 100px;
 }
 
 /*---------------------------------------------------hhhhhh-----*/
